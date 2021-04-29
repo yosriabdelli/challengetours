@@ -7,7 +7,6 @@ export default class Slider extends Component {
         return (
             <Carousel>
                 <Carousel.Item>
-                    
                     <img
                     className="d-block w-100"
                     src="https://i.pinimg.com/originals/a1/40/fb/a140fb48914b507998e2ccce6f8d36fd.jpg"
@@ -24,7 +23,6 @@ export default class Slider extends Component {
                     src="https://voyage-onirique.com/wp-content/uploads/2020/02/backiee-132756-chute-Islande-landscape.jpg"
                     alt="Second slide"
                     />
-
                     <Carousel.Caption>
                     <h3>Iceland</h3>
                     </Carousel.Caption>

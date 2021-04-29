@@ -12,25 +12,14 @@ const AddTour = ({ addTo }) => {
     addTo({ id: Date.now(), name, info, image, price });
   };
   return (
-    <Form>
+    <Form className="addform">
       <Form.Group>
-      <Form.Label>Name</Form.Label>
         <Form.Control value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder=" Name"
         />
       </Form.Group>
-
       <Form.Group>
-      <Form.Label>Info</Form.Label>
-        <Form.Control value={info}
-          onChange={(e) => setInfo(e.target.value)}
-          placeholder="info"
-        />
-      </Form.Group>
-
-      <Form.Group>
-      <Form.Label>Imge</Form.Label>
         <Form.Control value={image}
           onChange={(e) => setImage(e.target.value)}
           placeholder="image"
@@ -38,13 +27,20 @@ const AddTour = ({ addTo }) => {
       </Form.Group>
 
       <Form.Group>
-      <Form.Label>Price</Form.Label>
         <Form.Control 
           value={price}
           onChange={(e) => setPrice(e.target.value)}
           placeholder="price"
         />
       </Form.Group>
+      <Form.Group controlId="exampleForm.ControlTextarea1">
+        <Form.Control as="textarea" rows={3}
+          value={info}
+          onChange={(e) => setInfo(e.target.value)}
+          placeholder="Description"/>
+      </Form.Group>
+
+      
         <Link to="/tours">
           {" "}
           <Button variant="primary" type="submit" onClick={add}>Add New Tour</Button>

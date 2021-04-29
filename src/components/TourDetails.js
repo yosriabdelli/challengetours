@@ -15,17 +15,17 @@ const TourDetails = (props) => {
       </Link>
 
         <Card>
-            <Card.Img src={tourFounded&& tourFounded.image} />
+        {console.log(tourFounded)}
+            <Card.Img src={tourFounded.image} alt="image tour"/>
             <Card.Body>
-                <Card.Title>{tourFounded&& tourFounded.name}</Card.Title>
+                <Card.Title>{tourFounded.name}</Card.Title>
                 <Card.Text>
-                    <span> {tourFounded&& tourFounded.info}</span>
+                <strong>Description</strong>{tourFounded.info}<br/><strong className="price">Price : {tourFounded.price}</strong>
                 </Card.Text>
-                <Card.Text>{tourFounded&& tourFounded.price}</Card.Text>
             </Card.Body>
         </Card>
     </>
-  );
+  )
 };
 
 export default TourDetails;

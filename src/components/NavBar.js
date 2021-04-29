@@ -4,48 +4,47 @@ import {Navbar, Nav, Form,FormControl } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 
 export default class NavBar extends Component {
-  state = { activeItem: "home" };
-
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
+//   state = { activeItem: "home" };
+//   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
   render() {
-    const { activeItem } = this.state;
+    // const { activeItem } = this.state;
 
     return (
-    <Navbar bg="light" variant="light" fixed="top">
-        <Nav>
-        <Nav.Item>
-            <Link to="/">
+    <Navbar bg="light" variant="light">
+        <Nav className="mr-auto">
+        <Nav.Link>
             {" "}
-            <Nav.Link
-                name="home"
-                active={activeItem === "home"}
-                onClick={this.handleItemClick}
-            />
+            <Link to="/"
+                name="Home"
+                // active={activeItem === "Home"}
+                // onClick={this.handleItemClick}
+            >
+                Home
             </Link>
             
-        </Nav.Item>
+        </Nav.Link>
 
-        <Nav.Item>
-            <Link to="/tours">
+        <Nav.Link>
             {" "}
-            <Nav.Link
+            <Link to="/tours"
                 name="Tours"
-                active={activeItem === "Tours"}
-                onClick={this.handleItemClick}
-            />
+                // active={activeItem === "Tours"}
+                // onClick={this.handleItemClick}
+            >
+                Tours
             </Link>
-        </Nav.Item>
-        <Nav.Item>
-            <Link to="addTour">
+        </Nav.Link>
+        <Nav.Link>
             {" "}
-            <Nav.Link
-                name="add Tour"
-                active={activeItem === "add Tour"}
-                onClick={this.handleItemClick}
-            />
+            <Link to="addTour"
+                name="Add Tour"
+                // active={activeItem === "Add Tour"}
+                // onClick={this.handleItemClick}
+            >
+                Add Tour
             </Link>
-        </Nav.Item>
+        </Nav.Link>
         </Nav>
 
         <Form inline>
