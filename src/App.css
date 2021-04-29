@@ -13,10 +13,17 @@ form.addform{
 }
 .card{
   margin: 20px;
+  
+}
+.read{
+  margin-top: 20px;
+  background: #d0d0d0;
+  border-color: #d0d0d0;
 }
 .card-body{
   padding: 0 !important;
   background: #f1f1f1;
+  padding-bottom: 10px !important;
 }
 .card-body a{
   text-decoration: none;
@@ -30,7 +37,7 @@ form.addform{
   margin: 20px 0;
 }
 .card-text{
-  padding: 15px;
+  padding:0 15px;
 }
 .card-text .price{
   font-size: 20px;

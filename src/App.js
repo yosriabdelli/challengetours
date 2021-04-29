@@ -1,3 +1,7 @@
+// Button Not interested dont work(delete)
+// Details doesnt work (details tour)
+
+
 import tourss from "./Data";
 import { useState } from "react";
 import NavBar from "./components/NavBar";
