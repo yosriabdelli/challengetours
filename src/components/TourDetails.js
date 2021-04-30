@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const TourDetails = (props) => {
 
   const tourFounded = props.tours.find(
-    (tour) => tour.id === props.match.params.idTour
+    (tour) => tour.id === Number(props.match.params.idTour)
   );
   return (
     <>
